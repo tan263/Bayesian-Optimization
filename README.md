@@ -13,10 +13,10 @@ For more than one hyperparameters, the existing package
 was applied on tuning hyperparameters of XGboost to give a general view of results.
 
 ## Algorithm for Bayesian Optimization
+![Algorithm for Bayesian Optimization](https://github.com/tan263/Bayesian-Optimization/blob/master/BO_algorithm.png)
 
 
-
-## Random Search
+## Algorithm for Random Search
 1. Initialize a point `x0` from `runif(1)`
 2. Obtain a new point `x1` from the interval around the current point `x0` with radius `r` by `runif(1, min=max(c(x0-r,0)), max=min(c(x0+r),1))`. The default setting of `r` is 0.333.
 3. If `f(x1)>f(x0)`, then update `x0` by `x0 <- x1`. 
@@ -25,7 +25,8 @@ was applied on tuning hyperparameters of XGboost to give a general view of resul
 ## Examples (One Hyperparameter)
 
 #### A Toy Example
-A toy example was given to examine the implemented BO algorithm by maximize $f(x)=\exp(-(10x - 2)^2) + \exp(-\frac{(10x - 6)^2}{10}) + \frac{1}{(10x)^2 + 1}$.
+A toy example was given to examine the implemented BO algorithm by maximize 
+![equation](https://latex.codecogs.com/gif.latex?f%28x%29%3D%5Cexp%28-%2810x%20-%202%29%5E2%29%20&plus;%20%5Cexp%28-%5Cfrac%7B%2810x%20-%206%29%5E2%7D%7B10%7D%29%20&plus;%20%5Cfrac%7B1%7D%7B%2810x%29%5E2%20&plus;%201%7D)
 
 Plot of predicted f(x) and the acquisition function at iteration = 1:
 ![Plot of predicted f(x) and the acquisition function at iteration = 1](https://github.com/tan263/Bayesian-Optimization/blob/master/toy_iter_1.png)
@@ -58,3 +59,6 @@ was applied on tuning hyperparameters of XGboost. The dataset
 [agaricus.train](https://www.rdocumentation.org/packages/xgboost/versions/0.90.0.2/topics/agaricus.train), 
 which was the training part from [the mushroom data set](https://archive.ics.uci.edu/ml/datasets/mushroom) 
 originally by UCI Machine Learning Repository, was used in this example.
+
+Evolution of maximzed predicted accuracy by BO
+![Evolution of maximzed predicted accuracy by BO](https://github.com/tan263/Bayesian-Optimization/blob/master/multi_evolution.png)
