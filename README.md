@@ -25,13 +25,31 @@ was applied on tuning hyperparameters of XGboost to give a general view of resul
 ## Examples (One Hyperparameter)
 
 #### A Toy Example
-A toy example was given to examine the implemented BO algorithm.
+A toy example was given to examine the implemented BO algorithm by maximize $f(x)=\exp(-(10x - 2)^2) + \exp(-\frac{(10x - 6)^2}{10}) + \frac{1}{(10x)^2 + 1}$.
+
+Plot of predicted f(x) and the acquisition function at iteration = 1:
+![Plot of predicted f(x) and the acquisition function at iteration = 1](https://github.com/tan263/Bayesian-Optimization/blob/master/toy_iter_1.png)
+
+Plot of predicted f(x) and the acquisition function at iteration = 15
+![Plot of predicted f(x) and the acquisition function at iteration = 15](https://github.com/tan263/Bayesian-Optimization/blob/master/toy_iter_15.png)
+
+Comparison of Results by Bayesian Optimization and Random Search
+![Evolution of max f(x) by BO and Random Search](https://github.com/tan263/Bayesian-Optimization/blob/master/toy_compare.png)
 
 #### Hyperparameter Tuning on a XGboost model 
 
 The algorithm was examined by hyperparameter tuning on a XGboost model on the 
 [EMPRES](https://www.kaggle.com/tentotheminus9/empres-global-animal-disease-surveillance) 
 dataset for predicting if an animal disease is disease-leading to human.
+
+Plot of predicted accuracy and the acquisition function at iteration = 1
+![Plot of predicted accuracy and the acquisition function at iteration = 1](https://github.com/tan263/Bayesian-Optimization/blob/master/1dim_iter_1.png)
+
+Plot of predicted accuracy and the acquisition function at iteration = 10
+![Plot of predicted accuracy and the acquisition function at iteration = 10](https://github.com/tan263/Bayesian-Optimization/blob/master/1dim_iter_10.png)
+
+Comparison of Results by Bayesian Optimization and Random Search
+![Evolution of maximzed predicted accuracy by BO and Random Search](https://github.com/tan263/Bayesian-Optimization/blob/master/1dim_compare.png)
 
 ### Example (More Than One Hyperparameters)
 For more than one hyperparameters, the package 
