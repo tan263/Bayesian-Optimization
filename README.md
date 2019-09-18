@@ -61,4 +61,5 @@ which was the training part from [the mushroom data set](https://archive.ics.uci
 originally by UCI Machine Learning Repository, was used in this example.
 
 Evolution of maximzed predicted accuracy by BO
+
 ![Evolution of maximzed predicted accuracy by BO](https://github.com/tan263/Bayesian-Optimization/blob/master/multi_evolution.png)
